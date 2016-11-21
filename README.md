@@ -1,4 +1,4 @@
-# visual arm
+# Visual Arm
 
 A 4 servo arm control program learn to performreaching task over deep reinforcement Learning. The AI part is based on [DQN-tensorflow](https://github.com/devsisters/DQN-tensorflow).
 
@@ -23,8 +23,8 @@ It consists of three ros nodes:
 ## Installation
 
 1. Hardware preparation: make sure your robot arm, usb camera are plugged on your computer, all wires are connected properly.
-2. Open robotArm/Arm.h, modify the Arm Configrations according to your hardware (PIN, OFFSET...)
-3. Open robotArm/robotArm.ino with Arduino Editor, write the program into your arduino board.
+2. Open robotArm/Arm.h and modify the Arm Configrations according to your hardware (PIN, OFFSET...)
+3. Open robotArm/robotArm.ino with Arduino Editor, then write the program into your arduino board.
 
 ## Demo
 

@@ -44,9 +44,8 @@ Finally launch ArmController:
 
 For this part, these are two choices avaliable:
 
-1. Keyboard Controller: 
-
-setting: w/s, a/d, up/down, left/right for 4 servos.
+1. Keyboard Controller:
+ setting: w/s, a/d, up/down, left/right for 4 servos.
 
 	$ python ArmKeyBoardController.py
 
@@ -54,7 +53,7 @@ setting: w/s, a/d, up/down, left/right for 4 servos.
 
 	$ python ArmRLAIController.py
 
-Robot Arm will begin to move randomly, and hopefully it will gradually learn how to move its head towards the target obeject. 
-Parameters adjustment may be necessary, you can modify them in config.py.
+ Robot Arm will begin to move randomly, and hopefully it will gradually learn how to move its head towards the target obeject. 
+ Parameters adjustment may be necessary, you can modify them in config.py.
 
 	

@@ -5,11 +5,12 @@ import cv2
 import rospy
 from std_msgs.msg import Float64MultiArray
 from collections import  deque
+import click
 # 设定红色阈值，HSV空间
 redLower = np.array([170, 100, 100])
 redUpper = np.array([179, 255, 255])
 
-def getLocationOfRedObject(frame, display=True):
+def getLocationOfRedObject(frame, display):
     # 转到HSV空间
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     # 根据阈值构建掩膜
@@ -42,8 +43,11 @@ def getLocationOfRedObject(frame, display=True):
     if center is not None: return [center[0],center[1],radius]
     else: return None
 
-def main():
-    cap = cv2.VideoCapture("/dev/video0")
+@click.command()
+@click.option('--dev', default="/dev/video0", help='device file of camera.')
+@click.option('--display', default=False, help='whether to display the camera view')
+def main(dev, display):
+    cap = cv2.VideoCapture(dev)
     if not cap.isOpened():
         cap.open()
 
@@ -58,11 +62,11 @@ def main():
         if not ret:
             print 'No Camera'
             break
-        redObjectInfo = getLocationOfRedObject(frame)
+        redObjectInfo = getLocationOfRedObject(frame, display)
         msg1 = Float64MultiArray(data=frame.flatten())
         if redObjectInfo is not None:
             msg2 = Float64MultiArray(data=redObjectInfo)
-            rospy.loginfo(msg2)
+            if display: rospy.loginfo(msg2)
             pub2.publish(msg2)
 
         pub1.publish(msg1)

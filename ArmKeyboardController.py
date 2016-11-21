@@ -83,5 +83,5 @@ def test():
         print(ob,re,ter)
 
 if __name__ == '__main__':
-    test()
+    main()
     

@@ -42,19 +42,19 @@ Then mount arduino node:
 
 Finally launch ArmController:
 
-	For this part, these are two choices avaliable:
+For this part, these are two choices avaliable:
 
-	1. Keyboard Controller: 
+1. Keyboard Controller: 
 
-	setting: w/s, a/d, up/down, left/right for 4 servos.
+setting: w/s, a/d, up/down, left/right for 4 servos.
 
 	$ python ArmKeyBoardController.py
 
-	2. Reinforcement AI Controller
+2. Reinforcement AI Controller
 
 	$ python ArmRLAIController.py
 
-	Robot Arm will begin to move randomly, and hopefully it will gradually learn how to move its head towards the target obeject. 
-	Parameters adjustment may be necessary, you can modify them in config.py.
+Robot Arm will begin to move randomly, and hopefully it will gradually learn how to move its head towards the target obeject. 
+Parameters adjustment may be necessary, you can modify them in config.py.
 
 	

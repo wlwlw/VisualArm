@@ -1,6 +1,6 @@
 # Visual Arm
 
-A 4 servo arm control program learn to performreaching task over deep reinforcement Learning. The AI part is based on [DQN-tensorflow](https://github.com/devsisters/DQN-tensorflow).
+A 4 servo arm control program learn to perform reaching task over deep reinforcement Learning. The AI part is based on [DQN-tensorflow](https://github.com/devsisters/DQN-tensorflow).
 
 It consists of three ros nodes:
 
